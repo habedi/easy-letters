@@ -1,0 +1,29 @@
+# EditorConfig is awesome: https://EditorConfig.org
+
+# Top-most EditorConfig file
+root = true
+
+# Python specific settings, complying with PEP 8 style guide
+[*.py]
+indent_size = 4
+max_line_length = 80
+
+# Markdown files
+[*.md]
+trim_trailing_whitespace = false
+
+# Bash scripts
+[*.sh]
+indent_size = 2
+
+# SQL files
+[*.sql]
+indent_size = 2
+
+# YAML files
+[*.yml]
+indent_size = 2
+
+# JSON files
+[*.json]
+indent_size = 2

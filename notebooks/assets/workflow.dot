@@ -1,0 +1,57 @@
+digraph Elements {
+    fontname = "Helvetica,Arial,sans-serif"
+    layout = dot
+    rankdir = LR
+    node [
+    fontname = "Helvetica,Arial,sans-serif",
+    shape = box,
+    style = "filled,rounded",
+    color = "lightblue",
+    fillcolor = "white",
+    penwidth = 2
+    ]
+    edge [
+    fontname = "Helvetica,Arial,sans-serif",
+    color = "black"
+    ]
+
+    subgraph cluster_0 {
+    label = "User Inputs"
+    style = "dashed"
+    color = "lightgrey"
+    u [label = "User", fillcolor = "lightgreen"]
+    q [label = "Job Description", fillcolor = "lightyellow"]
+    als [label = "Existing Application Letters", fillcolor = "lightyellow"]
+    ei [label = "Extra Instructions", fillcolor = "lightyellow"]
+    }
+
+    subgraph cluster_1 {
+    label = "Processing"
+    style = "dashed"
+    color = "lightgrey"
+    api [label = "Embedding Model", fillcolor = "lightpink"]
+    db [label = "Vector Database", fillcolor = "lightgrey"]
+    cp [label = "Custom Prompt", fillcolor = "lightyellow"]
+    }
+
+    subgraph cluster_2 {
+    label = "Output"
+    style = "dashed"
+    color = "lightgrey"
+    llm [label = "Language Model", fillcolor = "lightpink"]
+    ld [label = "Letter Draft", fillcolor = "lightyellow"]
+    }
+
+    u -> q [label = "provides"]
+    u -> als [label = "provides"]
+    u -> ei [label = "provides"]
+    q -> api [label = "processed by"]
+    als -> api [label = "processed by"]
+    api -> db [label = "stores in"]
+    als -> db [label = "stores in"]
+    db -> cp [label = "retrieves from"]
+    cp -> llm [label = "forms"]
+    ei -> llm [label = "augments"]
+    llm -> ld [label = "generates"]
+    ld -> u [label = "reviews"]
+}

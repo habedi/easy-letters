@@ -1,0 +1,47 @@
+name: Tests
+
+on:
+  #  push:
+  #    branches:
+  #      - main
+  workflow_dispatch: # Enable manual runs
+  workflow_call: # Make this workflow available to be called by other workflows
+
+jobs:
+  run_tests:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        python-version: [ "3.10", "3.11", "3.12" ]
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set Up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install Poetry
+        run: |
+          pip install poetry
+
+      - name: Install Dependencies
+        run: |
+          poetry install --with dev
+
+      - name: Run Tests
+        shell: bash
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          poetry run pytest tests/ --cov --doctest-modules --junitxml=junit/test-results-${{ matrix.python-version }}.xml
+        continue-on-error: false
+
+      - name: Upload Test Results
+        uses: actions/upload-artifact@v2
+        with:
+          name: pytest-results-${{ matrix.python-version }}
+          path: junit/test-results-${{ matrix.python-version }}.xml
