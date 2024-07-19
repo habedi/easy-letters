@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "easy-letters"
-version = "0.1.6"
+version = "0.1.8"
 description = "A Python package for generating draft application letters using generative AI"
 authors = ["Hassan Abedi <hassan.abedi.t@gmail.com>"]
 readme = "README.md"
