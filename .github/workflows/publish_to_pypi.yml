@@ -30,9 +30,9 @@ jobs:
         run: |
           poetry install
 
-      - name: Update Version
-        run: |
-          poetry version patch # Use 'minor' or 'major' for minor or major version bumps
+#      - name: Update Version
+#        run: |
+#          poetry version patch # Use 'minor' or 'major' for minor or major version bumps
 
       - name: Build and Publish Package
         run: |
