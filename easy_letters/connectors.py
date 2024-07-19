@@ -8,7 +8,9 @@ from numpy import ndarray, dtype
 class LanguageModels:
     """List of supported language models."""
     OPENAI_GPT35TURBO = 'gpt-3.5-turbo'
+    OPENAI_GPT4TURBO = 'gpt-4-turbo'
     OPENAI_GPT4O = 'gpt-4o'
+    OPENAI_GPT4OMINI = 'gpt-4o-mini'
 
 
 class EmbeddingModels:
