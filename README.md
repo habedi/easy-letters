@@ -40,7 +40,9 @@ Easy Letters currently supports the following models:
 | Model                            | Type            |
 |----------------------------------|-----------------|
 | GPT-3.5 Turbo                    | Text Generation |
+| GPT-4 Turbo                      | Text Generation |
 | GPT-4o                           | Text Generation |
+| GPT-4o Mini                      | Text Generation |
 | Text Embedding 3 (Small Variant) | Text Embedding  |
 | Text Embedding 3 (Large Variant) | Text Embedding  |
 
