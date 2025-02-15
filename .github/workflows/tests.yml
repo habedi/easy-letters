@@ -1,9 +1,6 @@
 name: Tests
 
 on:
-  #  push:
-  #    branches:
-  #      - main
   workflow_dispatch: # Enable manual runs
   workflow_call: # Make this workflow available to be called by other workflows
 
@@ -13,7 +10,7 @@ jobs:
 
     strategy:
       matrix:
-        python-version: [ "3.10", "3.11", "3.12" ]
+        python-version: [ "3.10", "3.11", "3.12", "3.13" ]
 
     steps:
       - name: Checkout Repository
@@ -37,11 +34,11 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
-          poetry run pytest tests/ --cov --doctest-modules --junitxml=junit/test-results-${{ matrix.python-version }}.xml
+          poetry run pytest tests/ --cov --doctest-modules --cov-report=xml
         continue-on-error: false
 
-      - name: Upload Test Results
-        uses: actions/upload-artifact@v4
+      - name: Upload Coverage Reports to Codecov
+        uses: codecov/codecov-action@v5
         with:
-          name: pytest-results-${{ matrix.python-version }}
-          path: junit/test-results-${{ matrix.python-version }}.xml
+          token: ${{ secrets.CODECOV_TOKEN }}
+

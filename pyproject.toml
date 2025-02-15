@@ -1,11 +1,12 @@
 [tool.poetry]
 name = "easy-letters"
 version = "0.1.8"
-description = "A Python package for generating draft application letters using generative AI"
+description = "A Python library for generating draft application letters using generative AI"
 authors = ["Hassan Abedi <hassan.abedi.t@gmail.com>"]
+maintainers = ["Hassan Abedi <hassan.abedi.t@gmail.com>"]
 readme = "README.md"
 packages = [{ include = "easy_letters", from = "." }]
-include = ["README.md", "LICENSE"]
+include = ["README.md"]
 license = "MIT"
 repository = "https://github.com/habedi/easy-letters"
 
@@ -13,22 +14,31 @@ repository = "https://github.com/habedi/easy-letters"
 python = "^3.10"
 openai = "^1.16.1"
 qdrant-client = "^1.8.2"
+numpy = "^2.2.3"
 
 [tool.poetry.group.dev.dependencies]
-jupyter = "^1.0.0"
-pytest = "^8.2.2"
-black = ">=24.4.2,<26.0.0"
-pytest-cov = ">=5,<7"
 poetry-dynamic-versioning = "^1.4.0"
-tiktoken = ">=0.7,<0.10"
-pandas = "^2.2.2"
+pytest = "^8.2.2"
 pytest-mock = "^3.14.0"
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+pytest-cov = ">=5,<7"
+pandas = "^2.2.2"
+jupyter = "^1.0.0"
+tiktoken = ">=0.7,<0.10"
+ruff = "^0.9.9"
 
 [tool.poetry-dynamic-versioning]
 enable = true
 vcs = "git"
 versioning = "semver"  # Semantic Versioning
+
+#[build-system]
+#requires = ["poetry-core"]
+#build-backend = "poetry.core.masonry.api"
+
+#[build-system]
+#requires = ["pdm-backend"]
+#build-backend = "pdm.backend"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

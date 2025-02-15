@@ -67,6 +67,6 @@ class Ranker:
         Returns:
             list: A list of search results with similar documents.
         """
-        return self.client.search(collection_name=collection_name,
-                                  query_vector=embedding,
-                                  limit=top_k, score_threshold=min_similarity)
+        return self.client.query_points(collection_name=collection_name,
+                                        query=embedding,
+                                        limit=top_k, score_threshold=min_similarity)

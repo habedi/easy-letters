@@ -2,10 +2,12 @@ name: Publish to PyPI
 
 on:
   workflow_dispatch: # Enable manual runs
+  tag:
+    - 'v*' # Run on version tags
 
 jobs:
 
-  # Run tests before publishing
+  # Run the tests before publishing to PyPI
   call_tests:
     uses: ./.github/workflows/tests.yml
 
@@ -29,10 +31,6 @@ jobs:
       - name: Install Dependencies
         run: |
           poetry install
-
-      #      - name: Update Version
-      #        run: |
-      #          poetry version patch # Use 'minor' or 'major' for minor or major version bumps
 
       - name: Build and Publish Package
         run: |
