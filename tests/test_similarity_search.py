@@ -1,9 +1,9 @@
 import numpy as np
 
 from easy_letters import Ranker
-
 from tests.shared import (documents_with_embeddings, embedding_to_search,
-                            search_response)
+                          search_response)
+
 
 def test_find_similar():
     """

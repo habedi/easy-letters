@@ -24,11 +24,15 @@ tiktoken = ">=0.7,<0.9"
 pandas = "^2.2.2"
 pytest-mock = "^3.14.0"
 
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+#[build-system]
+#requires = ["poetry-core"]
+#build-backend = "poetry.core.masonry.api"
 
 [tool.poetry-dynamic-versioning]
 enable = true
 vcs = "git"
 versioning = "semver"  # Semantic Versioning
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
