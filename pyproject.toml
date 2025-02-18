@@ -20,7 +20,7 @@ pytest = "^8.2.2"
 black = ">=24.4.2,<26.0.0"
 pytest-cov = ">=5,<7"
 poetry-dynamic-versioning = "^1.4.0"
-tiktoken = ">=0.7,<0.9"
+tiktoken = ">=0.7,<0.10"
 pandas = "^2.2.2"
 pytest-mock = "^3.14.0"
 
