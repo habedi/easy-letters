@@ -19,6 +19,10 @@ letters.
 
 ![Easy Letters Workflow](assets/workflow.svg)
 
+> [!NOTE]
+> At the moment, Easy Letters only supports text generation and text embedding models from OpenAI.
+> However, the library is designed to be extensible, so more features and models can be added in the future versions.
+
 ### Installation
 
 ```bash
@@ -68,9 +72,6 @@ Easy Letters currently supports the following models:
 | GPT-4o Mini                      | Text Generation | OpenAI  |
 | Text Embedding 3 (Small Variant) | Text Embedding  | OpenAI  |
 | Text Embedding 3 (Large Variant) | Text Embedding  | OpenAI  |
-
-> [!NOTE]
-> At the moment, Easy Letters only supports text generation and text embedding models from OpenAI.
 
 ### License
 
