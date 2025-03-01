@@ -1,6 +1,6 @@
-# Data for Testing
+# Datasets for Tests
 
-The files in the `sample_application_letters` directory are
+The files in the [sample_letters](sample_letters/) directory are
 from [here](https://huggingface.co/datasets/ShashiVish/cover-letter-dataset).
 
-The files in the `sample_job_ads` directory are from [here](https://www.kaggle.com/datasets/madhab/jobposts).
+The files in the [sample_ads](sample_ads/) directory are from [here](https://www.kaggle.com/datasets/madhab/jobposts).

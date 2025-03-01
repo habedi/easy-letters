@@ -4,8 +4,8 @@ from easy_letters import Ranker
 
 # Sample documents and their embeddings for testing
 documents_with_embeddings = {
-    'text': ["Document 1", "Document 2"],
-    'embedding': [np.array([0.1, 0.2, 0.3]), np.array([0.4, 0.5, 0.6])]
+    "text": ["Document 1", "Document 2"],
+    "embedding": [np.array([0.1, 0.2, 0.3]), np.array([0.4, 0.5, 0.6])],
 }
 
 # Sample embedding to search for similar documents
@@ -14,7 +14,7 @@ embedding_to_search = np.array([0.1, 0.2, 0.3])
 # The expected response (score is Cosine similarity)
 search_response = [
     {"id": 0, "score": 1.0, "payload": {"text": "Document 1"}},
-    {"id": 1, "score": 0.9746, "payload": {"text": "Document 2"}}
+    {"id": 1, "score": 0.9746, "payload": {"text": "Document 2"}},
 ]
 
 

@@ -1,5 +1,3 @@
-# 📝 Overview
+# Notebooks
 
-The diagram below shows the high-level workflow of how Easy Letters generates application letter drafts.
-
-![Easy Letters Workflow](assets/workflow.png)
+This directory contains example Jupyter notebooks that show how to use Easy Letters to make draft application letters.
