@@ -14,10 +14,14 @@ The main idea is to speed up the process of writing application letters by not s
 Instead, an applicant could generate a draft letter that can be used as a starting point and customized as needed
 to make the final letter.
 
-The diagram below shows the high-level workflow of how Easy Letters can be used to generate draft application
-letters.
+The diagram below shows the workflow of the naive RAG pipeline that the current version of Easy Letters can be used
+to implement.
 
 ![Easy Letters Workflow](assets/workflow.svg)
+
+> [!NOTE]
+> At the moment, Easy Letters only supports text generation and text embedding models from OpenAI.
+> However, the library is designed to be extensible, so more features and models can be added in the future versions.
 
 ### Installation
 
@@ -68,9 +72,6 @@ Easy Letters currently supports the following models:
 | GPT-4o Mini                      | Text Generation | OpenAI  |
 | Text Embedding 3 (Small Variant) | Text Embedding  | OpenAI  |
 | Text Embedding 3 (Large Variant) | Text Embedding  | OpenAI  |
-
-> [!NOTE]
-> At the moment, Easy Letters only supports text generation and text embedding models from OpenAI.
 
 ### License
 
