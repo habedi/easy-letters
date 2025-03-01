@@ -2,8 +2,9 @@ name: Publish to PyPI
 
 on:
   workflow_dispatch: # Enable manual runs
-  tag:
-    - 'v*' # Run on version tags
+  push:
+    tags:
+      - 'v*' # Trigger on version tags
 
 jobs:
 
