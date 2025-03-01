@@ -1,11 +1,12 @@
 [tool.poetry]
 name = "easy-letters"
-version = "0.1.8"
-description = "A Python package for generating draft application letters using generative AI"
+version = "0.1.9"
+description = "A Python library for generating draft application letters using generative AI"
 authors = ["Hassan Abedi <hassan.abedi.t@gmail.com>"]
+maintainers = ["Hassan Abedi <hassan.abedi.t@gmail.com>"]
 readme = "README.md"
 packages = [{ include = "easy_letters", from = "." }]
-include = ["README.md", "LICENSE"]
+include = ["README.md"]
 license = "MIT"
 repository = "https://github.com/habedi/easy-letters"
 
@@ -15,20 +16,95 @@ openai = "^1.16.1"
 qdrant-client = "^1.8.2"
 
 [tool.poetry.group.dev.dependencies]
-jupyter = "^1.0.0"
-pytest = "^8.2.2"
-black = ">=24.4.2,<26.0.0"
-pytest-cov = ">=5,<7"
 poetry-dynamic-versioning = "^1.4.0"
-tiktoken = ">=0.7,<0.10"
-pandas = "^2.2.2"
+pytest = "^8.2.2"
 pytest-mock = "^3.14.0"
+pytest-cov = "^6.0.0"
+pandas = "^2.2.2"
+jupyter = "^1.0.0"
+tiktoken = "^0.9.0"
+ruff = "^0.9.9"
+mypy = "^1.15.0"
+icecream = "^2.1.4"
+numpy = "^2.2.3"
+notebook = "^7.3.2"
+
+#[build-system]
+#requires = ["poetry-core"]
+#build-backend = "poetry.core.masonry.api"
+
+#[build-system]
+#requires = ["pdm-backend"]
+#build-backend = "pdm.backend"
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+pythonpath = [".", "easy_letters", "notebooks"]
+addopts = "tests/ --cov --doctest-modules --cov-report=xml -s"
+
+[tool.mypy]
+python_version = "3.10"
+ignore_missing_imports = true
+disallow_untyped_calls = true
+strict_optional = true
+warn_redundant_casts = true
 
 [tool.poetry-dynamic-versioning]
 enable = true
 vcs = "git"
 versioning = "semver"  # Semantic Versioning
+
+# Ruff configuration
+[tool.ruff]
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv"
+]
+line-length = 100
+indent-width = 4
+src = ["src", "tests", "bin", "notebooks"]
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["ANN", "D", "E", "F", "I"]
+ignore = [
+    # Ignore missing docstrings
+    "D100", "D101", "D102", "D103", "D104", "D105", "D106", "D107",
+]
+fixable = ["ALL"]
+unfixable = []
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**/*.py" = []
