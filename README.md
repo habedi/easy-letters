@@ -1,6 +1,6 @@
 ## Easy Letters
 
-[![Tests](https://github.com/habedi/easy-letters/actions/workflows/tests.yml/badge.svg)](https://github.com/habedi/easy-letters/actions/workflows/tests.yml)
+[![Tests](https://img.shields.io/github/actions/workflow/status/habedi/easy-letters/tests.yml?label=tests)](https://github.com/habedi/easy-letters/actions/workflows/tests.yml)
 [![codecov](https://codecov.io/gh/habedi/easy-letters/graph/badge.svg?token=E47OPB2HVA)](https://codecov.io/gh/habedi/easy-letters)
 [![CodeFactor](https://www.codefactor.io/repository/github/habedi/easy-letters/badge)](https://www.codefactor.io/repository/github/habedi/easy-letters)
 [![python version](https://img.shields.io/badge/Python-%3E=3.10-blue)](https://github.com/habedi/easy-letters)
