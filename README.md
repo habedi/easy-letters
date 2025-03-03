@@ -1,15 +1,16 @@
 ## Easy Letters
 
-[![Tests](https://img.shields.io/github/actions/workflow/status/habedi/easy-letters/tests.yml?label=tests)](https://github.com/habedi/easy-letters/actions/workflows/tests.yml)
-[![codecov](https://codecov.io/gh/habedi/easy-letters/graph/badge.svg?token=E47OPB2HVA)](https://codecov.io/gh/habedi/easy-letters)
-[![CodeFactor](https://www.codefactor.io/repository/github/habedi/easy-letters/badge)](https://www.codefactor.io/repository/github/habedi/easy-letters)
-[![python version](https://img.shields.io/badge/Python-%3E=3.10-blue)](https://github.com/habedi/easy-letters)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/habedi/easy-letters/blob/main/LICENSE)
-[![PyPI version](https://badge.fury.io/py/easy-letters.svg)](https://badge.fury.io/py/easy-letters)
-[![pip downloads](https://img.shields.io/pypi/dm/easy-letters.svg)](https://pypi.org/project/easy-letters/)
+[![Tests](https://img.shields.io/github/actions/workflow/status/habedi/easy-letters/tests.yml?label=tests&style=flat&labelColor=555555&logo=github)](https://github.com/habedi/easy-letters/actions/workflows/tests.yml)
+[![Code Coverage](https://img.shields.io/codecov/c/github/habedi/easy-letters?style=flat&labelColor=555555&logo=codecov)](https://codecov.io/gh/habedi/easy-letters)
+[![Code Quality](https://img.shields.io/codefactor/grade/github/habedi/easy-letters?style=flat&labelColor=555555&logo=codefactor)](https://www.codefactor.io/repository/github/habedi/easy-letters)
+[![PyPI Version](https://img.shields.io/pypi/v/easy-letters.svg?style=flat&labelColor=555555&logo=pypi)](https://pypi.org/project/easy-letters/)
+[![Downloads](https://img.shields.io/pypi/dm/easy-letters.svg?style=flat&labelColor=555555&logo=pypi)](https://pypi.org/project/easy-letters/)
+[![Python Version](https://img.shields.io/badge/python-%3E=3.10-3776ab?style=flat&labelColor=555555&logo=python)](https://github.com/habedi/easy-letters)
+[![License](https://img.shields.io/badge/license-MIT-007ec6?style=flat&labelColor=555555&logo=open-source-initiative)](https://github.com/habedi/easy-letters/blob/main/LICENSE)
+
 
 Easy Letters is a Python library that provides the basic building blocks for creating a naive [retrieval augmented
-generation (or RAG)](https://arxiv.org/abs/2312.10997) pipeline to generate application letter drafts.
+generation](https://arxiv.org/abs/2312.10997) (or RAG) pipeline to generate application letter drafts.
 The main idea is to speed up the process of writing application letters by not starting from scratch.
 Instead, an applicant could generate a draft letter that can be used as a starting point and customized as needed
 to make the final letter.
